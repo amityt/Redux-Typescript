@@ -15,6 +15,5 @@ jobs:
           record: false
           start: npm run test
           working-directory: ./
-          headless: true
         env:
           CYPRESS_RECORD_KEY: 5c30091a-3557-4bb6-8b49-b21bea4ea9c4
