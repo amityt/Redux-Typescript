@@ -13,8 +13,7 @@ jobs:
         uses: cypress-io/github-action@v1
         with:
           record: true
-          start: npm run test:chrome
-          working-directory: redux-typescript
-          continue-on-error: true
+          start: npm run test
+          working-directory: ./
         env:
           CYPRESS_RECORD_KEY: 5c30091a-3557-4bb6-8b49-b21bea4ea9c4
