@@ -12,7 +12,7 @@ jobs:
       - name: Cypress runs
         uses: cypress-io/github-action@v1
         with:
-          record: true
+          record: false
           start: npm run test
           working-directory: ./
         env:
