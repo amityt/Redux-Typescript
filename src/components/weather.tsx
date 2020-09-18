@@ -1,6 +1,7 @@
 import { Typography } from "@material-ui/core";
 import React from "react";
 import { WeatherData } from "../store/types";
+import LinearProgressBar from "./linearProgressBar";
 
 interface WeatherProps {
 	data: WeatherData;
@@ -27,6 +28,9 @@ const Weather: React.FC<WeatherProps> = ({ data }) => {
 					{celsius}
 					<sup>&#8451;</sup>
 				</Typography>
+				<div style={{ width: 100 }}>
+					<LinearProgressBar value={(parseInt(celsius, 10) / 50) * 10} />
+				</div>
 			</div>
 			<div>
 				<Typography>{data.main.humidity}</Typography>
