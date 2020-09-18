@@ -9,7 +9,7 @@ interface LinearProgressProps {
 
 const useStyles = makeStyles((theme) => ({
 	barColorPrimary: {
-		// backgroundColor: (props) =>
+		// background: (props) =>
 		// 	props >= 40 && props <= 60 ? "yellow" : props >= 70 ? "green" : "red",
 		backgroundColor: "#F0F0F0",
 	},

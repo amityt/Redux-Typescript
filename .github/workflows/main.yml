@@ -1,0 +1,20 @@
+name: Frontend-Unit-Test
+on: [push, pull_request]
+
+jobs:
+  test:
+    name: Cypress run
+    runs-on: ubuntu-16.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Cypress runs
+        uses: cypress-io/github-action@v1
+        with:
+          record: true
+          start: npm run test:chrome
+          working-directory: redux-typescript
+          continue-on-error: true
+        env:
+          CYPRESS_RECORD_KEY: 5c30091a-3557-4bb6-8b49-b21bea4ea9c4
