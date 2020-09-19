@@ -23,13 +23,12 @@ const Covid: React.FC = () => {
 	};
 	const covidData = useSelector((state: RootState) => state.corona.data);
 	const loading = useSelector((state: RootState) => state.corona.loading);
-	console.log(covidData);
 	return (
 		<div>
 			<div>
 				<form onSubmit={handleSearch}>
 					<InputBase
-						placeholder="Enter country to search"
+						placeholder="Enter country name"
 						value={search}
 						onChange={valueChange}
 					/>
