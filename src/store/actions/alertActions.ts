@@ -1,4 +1,4 @@
-import { AlertAction, SET_ALERT } from "../types";
+import { AlertAction, SET_ALERT } from "../models/weather";
 
 export const setAlert = (message: string): AlertAction => {
 	return {

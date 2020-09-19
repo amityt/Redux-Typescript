@@ -63,11 +63,11 @@ interface GetWeatherAction {
 	payload: WeatherData;
 }
 
-interface SetLoadingAction {
+export interface SetLoadingAction {
 	type: typeof SET_LOADING;
 }
 
-interface SetErrorAction {
+export interface SetErrorAction {
 	type: typeof SET_ERROR;
 	payload: string;
 }

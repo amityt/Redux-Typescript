@@ -1,26 +1,26 @@
 import {
-	GET_WEATHER,
-	SET_ERROR,
-	SET_LOADING,
-	WeatherAction,
-	WeatherState,
-} from "../models/weather";
+	CoronaAction,
+	CoronaState,
+	GET_DETAILS,
+	SET_COVID_LOADING,
+} from "../models/corona";
+import { SET_ERROR } from "../models/weather";
 
-const initialState: WeatherState = {
+const initialState: CoronaState = {
 	data: null,
 	loading: false,
 	error: "",
 };
 
-export default (state = initialState, action: WeatherAction): WeatherState => {
+export default (state = initialState, action: CoronaAction): CoronaState => {
 	switch (action.type) {
-		case GET_WEATHER:
+		case GET_DETAILS:
 			return {
 				data: action.payload,
 				loading: false,
 				error: "",
 			};
-		case SET_LOADING:
+		case SET_COVID_LOADING:
 			return {
 				...state,
 				loading: true,

@@ -9,6 +9,7 @@ import Weather from "./components/weather";
 import { Typography } from "@material-ui/core";
 import { setAlert } from "./store/actions/alertActions";
 import { setError } from "./store/actions/weatherActions";
+import Covid from "./components/covid";
 
 const App: React.FC = () => {
 	const dispatch = useDispatch();
@@ -42,6 +43,7 @@ const App: React.FC = () => {
 				{error && (
 					<Alert message={error} onClose={() => dispatch(setError())} />
 				)}
+				<Covid />
 			</div>
 		</div>
 	);

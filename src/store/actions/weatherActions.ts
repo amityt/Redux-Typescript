@@ -7,7 +7,7 @@ import {
 	WeatherAction,
 	WeatherData,
 	WeatherError,
-} from "../types";
+} from "../models/weather";
 
 export const getWeather = (
 	city: string

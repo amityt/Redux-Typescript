@@ -1,6 +1,6 @@
 import { Typography } from "@material-ui/core";
 import React from "react";
-import { WeatherData } from "../store/types";
+import { WeatherData } from "../store/models/weather";
 import LinearProgressBar from "./linearProgressBar";
 
 interface WeatherProps {

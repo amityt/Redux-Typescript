@@ -1,4 +1,4 @@
-import { AlertAction, AlertState, SET_ALERT } from "../types";
+import { AlertAction, AlertState, SET_ALERT } from "../models/weather";
 
 const initialState: AlertState = {
 	message: "",

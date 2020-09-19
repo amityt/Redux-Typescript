@@ -16,7 +16,6 @@ const Search: React.FC<SearchProps> = ({ title }) => {
 	) => {
 		setCity(event.target.value);
 	};
-	console.log(city);
 	const submitHandler = (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
 		if (city.trim() === "") {

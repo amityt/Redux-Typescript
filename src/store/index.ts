@@ -4,9 +4,11 @@ import thunk from "redux-thunk";
 
 import weatherReducer from "./reducers/weatherReducer";
 import alertReducer from "./reducers/alertReducer";
+import covidReducer from "./reducers/covidReducer";
 
 const rootReducer = combineReducers({
 	weather: weatherReducer,
+	corona: covidReducer,
 	alert: alertReducer,
 });
 const store = createStore(
