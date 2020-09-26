@@ -17,3 +17,24 @@ jobs:
           working-directory: ./
         env:
           CYPRESS_RECORD_KEY: 5c30091a-3557-4bb6-8b49-b21bea4ea9c4
+
+      - name: Checking if the tests succeeded
+        if: ${{ success() }}
+        uses: peter-evans/create-or-update-comment@v1
+        with:
+          comment-id: "${{ github.event.comment.id }}"
+          body: |
+            **Test Result:** All tests are passed
+          reactions: hooray
+        env:
+          RUN_ID: ${{ github.run_id }}
+      - name: Checking if the tests failed
+        if: ${{ failure() }}
+        uses: peter-evans/create-or-update-comment@v1
+        with:
+          comment-id: "${{ github.event.comment.id }}"
+          body: |
+            **Test Result:** Some tests failed
+          reactions: sad
+        env:
+          RUN_ID: ${{ github.run_id }}
