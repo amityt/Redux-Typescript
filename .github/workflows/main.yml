@@ -20,21 +20,19 @@ jobs:
 
       - name: Checking if the tests succeeded
         if: ${{ success() }}
-        uses: peter-evans/create-or-update-comment@v1
-        with:
-          comment-id: "${{ github.event.comment.id }}"
-          body: |
-            **Test Result:** All tests are passed
-          reactions: hooray
+        uses: mshick/add-pr-comment@v1
         env:
-          RUN_ID: ${{ github.run_id }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          message: |
+            **Test Result:** Tests passes
+          allow-repeats: true
       - name: Checking if the tests failed
         if: ${{ failure() }}
-        uses: peter-evans/create-or-update-comment@v1
-        with:
-          comment-id: "${{ github.event.comment.id }}"
-          body: |
-            **Test Result:** Some tests failed
-          reactions: sad
+        uses: mshick/add-pr-comment@v1
         env:
-          RUN_ID: ${{ github.run_id }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          message: |
+            **Test Result:** Tests failed
+          allow-repeats: true
