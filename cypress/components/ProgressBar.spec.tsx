@@ -14,3 +14,9 @@ describe("LinearProgressBar2", () => {
 		mount(<LinearProgressBar value={10} />);
 	});
 });
+
+describe("LinearProgressBar2", () => {
+	it("ProgressBar mount", () => {
+		mount(<LinearProgressBar value={1} />);
+	});
+});
