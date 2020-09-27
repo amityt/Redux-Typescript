@@ -3,7 +3,7 @@ import mount from "cypress-react-unit-test";
 import React from "react";
 import LinearProgressBar from "../../src/components/linearProgressBar";
 
-//Demo Test 44
+//Demo Test 54
 describe("LinearProgressBar", () => {
 	it("ProgressBar mount", () => {
 		mount(<LinearProgressBar value={6} />);
