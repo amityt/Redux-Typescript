@@ -17,6 +17,18 @@ describe("LinearProgressBar2", () => {
 
 describe("LinearProgressBar2", () => {
 	it("ProgressBar mount", () => {
+		mount(<LinearProgressBar value={1} />);
+	});
+});
+
+describe("LinearProgressBar2", () => {
+	it("ProgressBar mount", () => {
+		mount(<LinearProgressBar value={3} />);
+	});
+});
+
+describe("LinearProgressBar2", () => {
+	it("ProgressBar mount", () => {
 		mount(<LinearProgressBar value={3} />);
 	});
 });
